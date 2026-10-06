@@ -7,11 +7,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+     body{
+         text-align: center;
+    
+     }
+     body {
+    background-color: lightblue;
+}
+    </style>
 </head>
 <body>
-    <h3>Nova postagem</h3>
+    <h2>Nova postagem</h2>
     <form action="salvar_postagem.php" method="POST">
-        Texto: <br>
+         Escreva sua postagem: <br>
         <textarea name="texto" maxlength="140" rows="4" cols="40"></textarea> <br><br>
 
         <input type="submit" value="Publicar">

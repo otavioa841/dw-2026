@@ -8,7 +8,39 @@
         table, tr, td {
             border-style: solid;
             padding: 20px;
+
         }
+        h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+    color: white;
+    text-transform: uppercase;
+}
+
+td {
+    background-color: #f5f5f5;
+}
+
+tr:hover td {
+    background-color: #e8e8e8;
+}
     </style>
 </head>
 <body>
@@ -49,7 +81,7 @@
                 echo "<td>$apelido</td>";
                 echo "<td>$email</td>";
                 echo "<td>$senha</td>";
-                echo "<td><img src='../$foto' width='100' height='100'></td>";
+                echo "<td><img src= '../$foto' width='100' height='100'></td>";
                 echo "<td><a href='excluir_usuario.php?id=$id'>excluir</a></td>";
                 echo "<td><a href='excluir_usuario.php?id=$id'><img src='../imagens/lixeira.png'></a></td>";
                 echo "<td><a href='cad_usuario.php?id=$id'>editar</a></td>";

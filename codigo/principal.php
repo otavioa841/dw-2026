@@ -9,19 +9,29 @@
     <title>Document</title>
     <style>
         .i1 {
-            width: 1000px;
+            width: 1300px;
+
+        
         }
 
         #i2 {
-            width: 200px;
+            width: 300px;
             height: 295px;
         }
         
         #i3 {
-            width: 790px;
+            width: 790pvx;
             height: 295px;
-
+ 
         }
+iframe{
+    width:1000px;
+    border: 2px solid #333;
+    border-radius: 10px;
+   
+}
+
+
     </style>
 </head>
 <body>
@@ -29,5 +39,6 @@
     <iframe id="i2" src="menu.php"></iframe>
     <iframe id="i3" name="conteudo" src="informacoes.html"></iframe> <br>
     <iframe class="i1" src="rodape.html"></iframe>
+    
 </body>
 </html>

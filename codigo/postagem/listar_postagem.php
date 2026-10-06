@@ -6,30 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div {
-            border-style: solid;
-            padding: 10px;
-        }
-
-        .postagens {
-            border-color: blue;
-        }
-
-        .postagem {
-            border-color: black;
-            margin: 10px;
-        }
-
-        .comentarios {
-            border-color: green;
-        }
-
-        .sem-comentarios {
-            border-color: #ccc;
-            color: #888;
-            background: #f4f4f4;
+        body {
+    font-family: Arial;
+    background-color: #f2f2f2;
 }
 
+h2 {
+    text-align: center;
+}
+
+.postagens {
+    width: 600px;
+    margin: auto;
+}
+
+.postagem {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px #ccc;
+}
+
+.postagem img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.nome-autor {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.horario {
+    color: gray;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.comentarios {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f5f5f5;
+}
+
+.sem-comentarios {
+    color: gray;
+    margin-top: 10px;
+}
     </style>
 </head>
 
@@ -62,18 +87,19 @@
 
             echo "<div>";
             echo "<img src='$foto'>";
-            echo "$nome";
-            echo $data_hora;
+            echo "<span class='nome-autor'>$nome</span>";
             echo "</div>";
 
             echo $texto;
+
+            echo "<div class='horario'>$data_hora</div>";
 
             //caixa dos comentarios
             $sql3 = "SELECT * FROM comentario WHERE idpostagem = $idpostagem";
             $comentarios = mysqli_query($conexao, $sql3);
 
             if (mysqli_num_rows($comentarios) == 0) {
-    echo "<div class='sem-comentarios'>Essa postagem não possui comentários.</div>";
+            echo "<div class='sem-comentarios'>Essa postagem não possui comentários.</div>";
             } else {
                 echo "<div class='comentarios'>";
                 // listar comentários aqui
