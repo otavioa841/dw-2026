@@ -20,8 +20,13 @@
 <body>
     <h2>Nova postagem</h2>
     <form action="salvar_postagem.php" method="POST">
+<<<<<<< HEAD
          Escreva sua postagem: <br>
         <textarea name="texto" maxlength="140" rows="4" cols="40"></textarea> <br><br>
+=======
+       Texto: <br>
+      <input type="text" name="texto" maxlength="140"> <br><br>
+>>>>>>> 1c0d818df0c95e40b70aca26ee26f5d2d1ef3802
 
         <input type="submit" value="Publicar">
     </form>

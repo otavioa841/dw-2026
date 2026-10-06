@@ -10,4 +10,8 @@
     mysqli_query($conexao, $sql);
 
     header("Location: listar_postagem.php");
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> 1c0d818df0c95e40b70aca26ee26f5d2d1ef3802

@@ -20,13 +20,21 @@
         </style>
 </head>
 <body>
-    <h2>Projeto Rede Social</h2>
+    <h2> Projeto Rede Social </h2>
+
     <?php
+    // puxa as variáveis de sessão do usuário logado
         $email = $_SESSION['email'];
         $nome = $_SESSION['nome'];
+<<<<<<< HEAD
 
         echo "<p> Olá $nome ($email)</p>";
        ?>
       <img src="../imagens/goku.png" alt="goku imagem">
+=======
+    // exibe uma mensagem de boas vindas com o nome e email do usuário logado
+        echo "<p> ๋ ࣭ ⭑ Olá, $nome ($email)</p>";
+    ?>
+>>>>>>> 1c0d818df0c95e40b70aca26ee26f5d2d1ef3802
 </body>
 </html>

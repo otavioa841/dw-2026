@@ -48,6 +48,7 @@ tr:hover td {
 
     <table>
         <tr>
+            <!-- cabeçalho da tabela -->
             <td>id</td>
             <td>nome</td>
             <td>apelido</td>
@@ -60,10 +61,12 @@ tr:hover td {
         </tr>
 
         <?php
+        // puxa os dados do banco de dados
         require_once "../conexao.php";
         
         $sql = "SELECT * FROM usuario";
-        
+
+        // executa a query e guarda o resultado na variavel $resultados
         $resultados = mysqli_query($conexao, $sql);
         
         //quebra a variável $resultados em linhas (vetores/array)
@@ -76,6 +79,7 @@ tr:hover td {
             $foto = $linha['foto'];
 
             echo "<tr>";
+            // exibe cada coluna do banco de dados em uma célula da tabela
                 echo "<td>$id</td>";
                 echo "<td>$nome</td>";
                 echo "<td>$apelido</td>";

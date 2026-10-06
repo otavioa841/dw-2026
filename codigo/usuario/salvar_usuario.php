@@ -9,6 +9,8 @@ $email = $_POST['email'];
 $senha = $_POST['senha'];
 $foto = $_POST['foto'];
 
+// se o id for 0, é um insert, se for diferente de 0, é um update
+
 if ($id == 0) {
     $sql = "INSERT INTO usuario (nome, apelido, email, senha, foto) VALUES ('$nome', '$apelido', '$email', '$senha', '$foto')";
 }
